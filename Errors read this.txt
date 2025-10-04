@@ -1,0 +1,4 @@
+yamin@GT1_Mega MINGW64 ~/Desktop/Code And Projercts/go it/Eats (master)
+$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/makar5555/Eats.git'
