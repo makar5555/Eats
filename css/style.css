@@ -6,13 +6,25 @@
     --titles-color: rgba(0, 0, 0, 1);
     --app-desc-color: rgba(115, 115, 115, 1);
     --footer-desc-color: rgba(92, 92, 92, 1);
-    --bg: rgba(37, 43, 66, 0.4);
-    --bg1:rgba(23, 16, 16, 0.6);
-}    
-:root{
     --font-family: "Montserrat", sans-serif;
     --second-family: "Poppins", sans-serif;
     --third-family: "Roboto", sans-serif;
+    --hero-bg-color: rgba(23, 16, 16, 0.6);
+    --order-bg-color: rgba(37, 43, 66, 0.4);
+}
+
+.title,
+.subtitle {
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 24px;
+}
+
+.desc {
+    font-weight: 500;
+    font-size: 24px;
 }
 
 * {
@@ -22,42 +34,34 @@
 
 body {
     font-family: var(--font-family);
+    line-height: 36px;
+    letter-spacing: 0.1px;
 }
 
 .container {
-    width: 1350px;
+    width: 1210px;
     margin: 0 auto;
 }
 
 .header {
     background-color: var(--hero-title-color);
+    padding-top: 49px;
+    padding-bottom: 41.27px;
 }
 
 .header-container {
     display: flex;
-    align-content: baseline;
+    align-items: center;
     justify-content: space-between;
 }
 
-.header-logo {
-    width: 150px;
-    height: 65.21px;
-    padding-top: 49.52px;
-    padding-bottom: 41.27px;
-
-}
-
-.header-nav {
-    padding-right: 210px;
+.logo {
+    line-height: 0;
 }
 
 .nav-list {
     display: flex;
     gap: 94px;
-    align-content: baseline;
-    padding-top: 54px;
-    padding-bottom: 54px;
-    text-transform: capitalize;
 }
 
 .nav-link:hover {
@@ -70,93 +74,192 @@ body {
     font-size: 16px;
     line-height: 28px;
     letter-spacing: 0.2px;
+    padding: 10px;
+    display: inline-block;
 }
 
 .hero {
-    background-image: url(/image/hero-bg.jpg);
-    width: auto;
-    height: 619px;
-}
-
-.hero-container {
+    background-color: var(--hero-bg-color);
     text-align: center;
+    padding-top: 79px;
+    padding-bottom: 162px;
+    background-image: linear-gradient(to top, var(--hero-bg-color), var(--hero-bg-color)), url(./images/hero-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-subtitle {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 36px;
-    letter-spacing: 0.1px;
     color: var(--hero-subtitle-color);
     padding-bottom: 10px;
-    padding-top: 79px;
 }
 
 .hero-title {
     font-family: var(--second-family);
     color: var(--hero-title-color);
     font-size: 58px;
-    font-weight: 700;
     line-height: 80px;
     letter-spacing: 0.2px;
-    padding-bottom: 9.89px;
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 .hero-desc {
-    padding-bottom: 78px;
+    padding-bottom: 54px;
     color: var(--hero-subtitle-color);
-    font-size: 24px;
-    font-weight: 500;
     letter-spacing: 0.2px;
     line-height: 38px;
 }
 
 .hero-list {
     display: flex;
-    justify-content: space-between;
-    padding-left: 394px;
-    padding-right: 387px;
-    padding-bottom: 162px;
+    gap: 67px;
+    justify-content: center;
 }
 
 
 .hero-button {
     color: var(--hero-title-color);
     font-size: 24px;
-    font-weight: 700;
-    line-height: 36px;
-    letter-spacing: 0.1px;
-    text-align: center;
-    height: 36px;
-    padding-top: 16px;
-    padding-bottom: 16px;
     background-color: var(--hover-color);
-    width: 236px;
-    height: 68px;
+    padding: 16px 58px 16px 73px;
     border-width: 0;
     border-radius: 30px;
+    font-weight: 700;
 }
 
-.second-button {
+.hero-button-bg {
     border-width: 1px;
     border-color: var(--hero-title-color);
     border-style: solid;
     background-color: transparent;
+    padding-inline: 82px;
+}
+
+.app {
+    padding-top: 56px;
+    padding-bottom: 190.78px;
+}
+
+.app-list {
+    padding-left: 84px;
+    padding-right: 71px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 108px;
+}
+
+.app-item {
+    display: flex;
+    gap: 287px;
+    align-items: center;
+}
+
+.app-item:nth-child(2) {
+    flex-direction: row-reverse;
+    gap: 250px;
 }
 
 .app-title {
     font-family: var(--second-family);
+    color: var(--titles-color);
     font-weight: 600;
     font-size: 44px;
-    line-height: 36px;
-    letter-spacing: 0.1px;
     text-align: center;
-    padding-top: 56px;
     padding-bottom: 70px;
 }
-.app-desc, .order-desc{
-    color: var(--app-desc-color);
-}
-.app-title, .order-title{
+
+.app-subtitle {
     color: var(--hover-color);
+    padding-bottom: 17px;
+}
+
+.app-item-title {
+    font-size: 40px;
+    line-height: 57px;
+    color: var(--nav-text-color);
+    letter-spacing: 0.2px;
+    padding-bottom: 17px;
+}
+
+.app-desk {
+    color: var(--app-desc-color);
+    line-height: 38px;
+    letter-spacing: 0.2px;
+    max-width: 480px;
+}
+
+.order {
+    background-color: var(--order-bg-color);
+    text-align: center;
+    padding-bottom: 131px;
+    padding-top: 140px;
+    background-image: url(./images/order-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.order-title {
+    color: var(--hero-title-color);
+    font-size: 40px;
+    line-height: 57px;
+    letter-spacing: 0.2px;
+    padding-bottom: 10px;
+}
+
+.order-desc {
+    color: var(--hero-title-color);
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2px;
+    padding-bottom: 59px;
+}
+
+.order-list {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.order-btn {
+    background-color: var(--hover-color);
+    color: var(--hero-title-color);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    border-width: 0;
+    border-radius: 10px;
+    padding-block: 18px;
+    padding-inline: 31px;
+    line-height: 28px;
+}
+
+.order-btn-right {
+    background-color: transparent;
+    border-width: 1px;
+    border-color: var(--hero-title-color);
+    border-style: solid;
+    padding: 16px 45px;
+}
+
+.footer {
+    background-color: var(--hero-title-color);
+    padding-top: 114px;
+    padding-bottom: 58px;
+}
+
+.footer-container {
+    display: flex;
+    background-color: var(--hero-title-color);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-desc {
+    color: var(--footer-desc-color);
+    font-family: var(--third-family);
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
 }
